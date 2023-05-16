@@ -20,7 +20,7 @@
 #include <gps.h>
 
 #include <boost/assign/list_of.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/cstdint.hpp>
 #include "boost/date_time/gregorian/gregorian.hpp"
 #include <boost/format.hpp>

@@ -45,6 +45,7 @@
 using namespace uhd;
 using namespace uhd::usrp_clock;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 namespace asio = boost::asio;
 namespace fs = boost::filesystem;
 

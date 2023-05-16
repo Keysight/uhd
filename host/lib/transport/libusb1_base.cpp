@@ -25,7 +25,7 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/foreach.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <cstdlib>
 #include <iostream>
 

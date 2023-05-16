@@ -25,7 +25,7 @@
 #include <uhd/types/dict.hpp>
 #include <boost/tuple/tuple.hpp>
 #include <boost/format.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/foreach.hpp>
 #include <boost/assign/list_of.hpp>
 

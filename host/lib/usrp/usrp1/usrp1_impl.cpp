@@ -35,6 +35,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 const boost::uint16_t USRP1_VENDOR_ID  = 0xfffe;
 const boost::uint16_t USRP1_PRODUCT_ID = 0x0002;

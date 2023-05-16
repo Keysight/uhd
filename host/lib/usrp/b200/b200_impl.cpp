@@ -43,6 +43,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 static const boost::posix_time::milliseconds REENUMERATION_TIMEOUT_MS(3000);
 

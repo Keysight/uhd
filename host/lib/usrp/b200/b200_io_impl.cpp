@@ -22,7 +22,7 @@
 #include "../../transport/super_send_packet_handler.hpp"
 #include "async_packet_handler.hpp"
 #include <uhd/utils/math.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/math/common_factor.hpp>
 #include <set>

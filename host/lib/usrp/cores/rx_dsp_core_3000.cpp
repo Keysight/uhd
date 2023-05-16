@@ -45,6 +45,7 @@ template <class T> T ceil_log2(T num){
 }
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 const double rx_dsp_core_3000::DEFAULT_CORDIC_FREQ = 0.0;
 const double rx_dsp_core_3000::DEFAULT_RATE = 1e6;

@@ -29,7 +29,7 @@
 #include <boost/math/special_functions/sign.hpp>
 #include <boost/math/special_functions/round.hpp>
 #include <boost/thread/thread.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
 #include <boost/make_shared.hpp>
 
@@ -56,6 +56,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 static const size_t alignment_padding = 512;
 

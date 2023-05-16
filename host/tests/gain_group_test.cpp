@@ -17,13 +17,14 @@
 
 #include <boost/test/unit_test.hpp>
 #include <uhd/utils/gain_group.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/math/special_functions/round.hpp>
 #include <iostream>
 
 #define rint(x) boost::math::iround(x)
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 /***********************************************************************
  * Define gain element classes with needed functions

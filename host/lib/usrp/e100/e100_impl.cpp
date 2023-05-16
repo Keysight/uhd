@@ -22,7 +22,7 @@
 #include <uhd/exception.hpp>
 #include <uhd/utils/static.hpp>
 #include <uhd/utils/paths.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/functional/hash.hpp>
@@ -33,6 +33,7 @@
 
 using namespace uhd;
 using namespace uhd::usrp;
+using namespace boost::placeholders;
 namespace fs = boost::filesystem;
 
 ////////////////////////////////////////////////////////////////////////

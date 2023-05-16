@@ -31,7 +31,7 @@
 #include <uhd/transport/bounded_buffer.hpp>
 #include <boost/thread/thread.hpp>
 #include <boost/format.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/asio.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/make_shared.hpp>
@@ -40,6 +40,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 namespace asio = boost::asio;
 namespace pt = boost::posix_time;
 

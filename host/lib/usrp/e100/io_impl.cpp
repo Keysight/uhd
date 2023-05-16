@@ -23,13 +23,14 @@
 #include <uhd/utils/msg.hpp>
 #include <uhd/utils/log.hpp>
 #include <uhd/utils/tasks.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
 #include <boost/make_shared.hpp>
 
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 static const size_t vrt_send_header_offset_words32 = 0;
 

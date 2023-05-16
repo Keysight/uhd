@@ -37,6 +37,7 @@
 
 using namespace uhd;
 using namespace uhd::usrp;
+using namespace boost::placeholders;
 
 const std::string multi_usrp::ALL_GAINS = "";
 

@@ -25,7 +25,7 @@
 #include <boost/make_shared.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/condition_variable.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <vector>
 #include <iostream>
 

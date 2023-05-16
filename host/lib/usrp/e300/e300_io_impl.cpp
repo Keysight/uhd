@@ -23,7 +23,7 @@
 #include "../../transport/super_send_packet_handler.hpp"
 #include "async_packet_handler.hpp"
 #include <uhd/transport/bounded_buffer.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <uhd/utils/tasks.hpp>
 #include <uhd/utils/log.hpp>
 #include <boost/foreach.hpp>

@@ -24,7 +24,7 @@
 #include <boost/foreach.hpp>
 #include <boost/format.hpp>
 #include <boost/function.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/circular_buffer.hpp>
 #include <boost/thread/mutex.hpp>
@@ -39,6 +39,7 @@
 
 using namespace uhd;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 static const size_t DEFAULT_NUM_XFERS = 16;     //num xfers
 static const size_t DEFAULT_XFER_SIZE = 32*512; //bytes

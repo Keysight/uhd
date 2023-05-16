@@ -39,6 +39,7 @@
 
 using namespace uhd;
 using namespace uhd::usrp;
+using namespace boost::placeholders;
 
 /***********************************************************************
  * UBX Data Structures

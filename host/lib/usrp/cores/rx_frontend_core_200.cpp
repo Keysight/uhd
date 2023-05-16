@@ -17,9 +17,10 @@
 
 #include "rx_frontend_core_200.hpp"
 #include <boost/math/special_functions/round.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 #define REG_RX_FE_SWAP_IQ             _base + 0 //lower bit
 #define REG_RX_FE_MAG_CORRECTION      _base + 4 //18 bits

@@ -28,7 +28,7 @@
 #include <uhd/usrp/subdev_spec.hpp>
 #include <uhd/transport/if_addrs.hpp>
 #include <boost/foreach.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/functional/hash.hpp>
 #include <boost/assign/list_of.hpp>
@@ -48,6 +48,7 @@ using namespace uhd::usrp;
 using namespace uhd::transport;
 using namespace uhd::niusrprio;
 using namespace uhd::usrp::x300;
+using namespace boost::placeholders;
 namespace asio = boost::asio;
 
 /***********************************************************************
@@ -1472,7 +1473,7 @@ void x300_impl::sync_times(mboard_members_t &mb, const uhd::time_spec_t& t)
 
 bool x300_impl::wait_for_clk_locked(mboard_members_t& mb, boost::uint32_t which, double timeout)
 {
-    boost::system_time timeout_time = boost::get_system_time() + boost::posix_time::milliseconds(timeout * 1000.0);
+    boost::system_time timeout_time = boost::get_system_time() + boost::posix_time::milliseconds(int(timeout * 1000.0));
     do {
         if (mb.fw_regmap->clock_status_reg.read(which)==1)
             return true;

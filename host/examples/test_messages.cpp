@@ -24,7 +24,7 @@
 #include <boost/assign/list_of.hpp>
 #include <boost/program_options.hpp>
 #include <boost/foreach.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
 #include <cstdlib>
 #include <ctime>

@@ -65,7 +65,7 @@
 #include <boost/format.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/math/special_functions/round.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 
 namespace uhd{ namespace usrp{
 

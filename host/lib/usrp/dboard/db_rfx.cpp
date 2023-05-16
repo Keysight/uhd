@@ -45,13 +45,14 @@
 #include <uhd/usrp/dboard_base.hpp>
 #include <uhd/usrp/dboard_manager.hpp>
 #include <boost/assign/list_of.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
 #include <boost/math/special_functions/round.hpp>
 
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace boost::assign;
+using namespace boost::placeholders;
 
 /***********************************************************************
  * The RFX Series constants

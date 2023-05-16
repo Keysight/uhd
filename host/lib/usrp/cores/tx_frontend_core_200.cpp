@@ -20,9 +20,10 @@
 #include <uhd/exception.hpp>
 #include <boost/assign/list_of.hpp>
 #include <boost/math/special_functions/round.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 #define REG_TX_FE_DC_OFFSET_I         _base + 0 //24 bits
 #define REG_TX_FE_DC_OFFSET_Q         _base + 4 //24 bits

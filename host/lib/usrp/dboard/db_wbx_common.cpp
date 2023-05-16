@@ -26,6 +26,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace boost::assign;
+using namespace boost::placeholders;
 
 
 /***********************************************************************

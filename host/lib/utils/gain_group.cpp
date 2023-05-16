@@ -21,11 +21,12 @@
 #include <uhd/utils/algorithm.hpp>
 #include <uhd/exception.hpp>
 #include <boost/foreach.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <algorithm>
 #include <vector>
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 static const bool verbose = false;
 

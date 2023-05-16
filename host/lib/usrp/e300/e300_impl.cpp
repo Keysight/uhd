@@ -39,7 +39,7 @@
 #include <boost/format.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/functional/hash.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/assign/list_of.hpp>
 #include <boost/thread/thread.hpp> //sleep

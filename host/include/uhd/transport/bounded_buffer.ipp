@@ -19,7 +19,7 @@
 #define INCLUDED_UHD_TRANSPORT_BOUNDED_BUFFER_IPP
 
 #include <uhd/config.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/utility.hpp>
 #include <boost/function.hpp>
 #include <boost/circular_buffer.hpp>

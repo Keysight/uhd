@@ -19,9 +19,9 @@
 #include "../../transport/super_recv_packet_handler.hpp"
 #include "../../transport/super_send_packet_handler.hpp"
 #include "b100_impl.hpp"
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/format.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/thread.hpp>
 #include <uhd/utils/msg.hpp>
 #include <uhd/utils/log.hpp>
@@ -30,6 +30,7 @@
 using namespace uhd;
 using namespace uhd::usrp;
 using namespace uhd::transport;
+using namespace boost::placeholders;
 
 void b100_impl::update_rates(void){
     const fs_path mb_path = "/mboards/0";
@@ -218,9 +219,9 @@ tx_streamer::sptr b100_impl::get_tx_stream(const uhd::stream_args_t &args_){
         UHD_ASSERT_THROW(dsp == 0); //always 0
         _tx_dsp->setup(args);
         my_streamer->set_xport_chan_get_buff(chan_i, boost::bind(
-            &zero_copy_if::get_send_buff, _data_transport, _1
+            &zero_copy_if::get_send_buff, _data_transport, boost::placeholders::_1
         ));
-        my_streamer->set_async_receiver(boost::bind(&fifo_ctrl_excelsior::pop_async_msg, _fifo_ctrl, _1, _2));
+        my_streamer->set_async_receiver(boost::bind(&fifo_ctrl_excelsior::pop_async_msg, _fifo_ctrl, boost::placeholders::_1, boost::placeholders::_2));
         _tx_streamers[dsp] = my_streamer; //store weak pointer
     }
 

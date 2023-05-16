@@ -18,10 +18,12 @@
 #include <boost/test/unit_test.hpp>
 #include "../lib/transport/super_send_packet_handler.hpp"
 #include <boost/shared_array.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <complex>
 #include <vector>
 #include <list>
+
+using namespace boost::placeholders;
 
 #define BOOST_CHECK_TS_CLOSE(a, b) \
     BOOST_CHECK_CLOSE((a).get_real_secs(), (b).get_real_secs(), 0.001)

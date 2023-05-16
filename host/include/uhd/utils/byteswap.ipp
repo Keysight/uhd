@@ -99,7 +99,7 @@
 /***********************************************************************
  * Define the templated network to/from host conversions
  **********************************************************************/
-#include <boost/detail/endian.hpp>
+#include <boost/endian/arithmetic.hpp>
 
 namespace uhd {
 

@@ -18,7 +18,7 @@
 #ifndef INCLUDED_IHEX_READER_HPP
 #define INCLUDED_IHEX_READER_HPP
 
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/function.hpp>
 #include <boost/cstdint.hpp>
 #include <string>

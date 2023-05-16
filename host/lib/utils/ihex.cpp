@@ -23,6 +23,7 @@
 #include <fstream>
 
 using namespace uhd;
+using namespace boost::placeholders;
 
 /*!
  * Verify checksum of a Intel HEX record

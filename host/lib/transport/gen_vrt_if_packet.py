@@ -33,7 +33,7 @@ TMPL_TEXT = """<% import time %>
 #include <uhd/exception.hpp>
 #include <uhd/transport/vrt_if_packet.hpp>
 #include <uhd/utils/byteswap.hpp>
-#include <boost/detail/endian.hpp>
+#include <boost/endian/arithmetic.hpp>
 #include <vector>
 
 //define the endian macros to convert integers

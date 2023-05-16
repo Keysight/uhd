@@ -29,6 +29,7 @@
 #include <complex>
 
 namespace po = boost::program_options;
+using namespace boost::placeholders;
 
 static bool stop_signal_called = false;
 void sig_int_handler(int){stop_signal_called = true;}
@@ -178,7 +179,7 @@ bool check_locked_sensor(std::vector<std::string> sensor_names, const char* sens
 
     while (true) {
         if ((not first_lock_time.is_not_a_date_time()) and
-                (boost::get_system_time() > (first_lock_time + boost::posix_time::seconds(setup_time))))
+                (boost::get_system_time() > (first_lock_time + boost::posix_time::seconds(int(setup_time)))))
         {
             std::cout << " locked." << std::endl;
             break;
@@ -192,7 +193,7 @@ bool check_locked_sensor(std::vector<std::string> sensor_names, const char* sens
         else {
             first_lock_time = boost::system_time();	//reset to 'not a date time'
 
-            if (boost::get_system_time() > (start + boost::posix_time::seconds(setup_time))){
+            if (boost::get_system_time() > (start + boost::posix_time::seconds(int(setup_time)))){
                 std::cout << std::endl;
                 throw std::runtime_error(str(boost::format("timed out waiting for consecutive locks on sensor \"%s\"") % sensor_name));
             }
@@ -312,7 +313,7 @@ int UHD_SAFE_MAIN(int argc, char *argv[]){
     //set the antenna
     if (vm.count("ant")) usrp->set_rx_antenna(ant);
 
-    boost::this_thread::sleep(boost::posix_time::seconds(setup_time)); //allow for some setup time
+    boost::this_thread::sleep(boost::posix_time::seconds(int(setup_time))); //allow for some setup time
 
     //check Ref and LO Lock detect
     if (not vm.count("skip-lo")){
